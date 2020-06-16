@@ -22,13 +22,20 @@ function remainderOf(n, d) {
     If you're not sure, step out of the code and use pen + paper. Start
     with simple examples and pay attention to the process you carry out.
   */
+  return console.log(n % d)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for remainderOf');
+  remainderOf(10, 1); 
+  remainderOf(10,2);
+  remainderOf(10, 3); 
+  remainderOf(10, 4);
+  remainderOf(129, 17); 
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+ 
 }
 
 module.exports = remainderOf;

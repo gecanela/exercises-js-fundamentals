@@ -23,6 +23,13 @@
 
 function countLetter(string, letter) {
   // This is your job. :)
+  let letter_count=[];
+  for (l of string){
+    if (letter === l){
+      letter_count.push(l)
+    };
+  }
+  return letter_count.length;
 }
 
 if (require.main === module) {
@@ -30,6 +37,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(countLetter('hello', 'l')); 
+  console.log(countLetter('Mississippi', 's'));
+  console.log(countLetter('Mississippi', 'x'));
+  console.log(countLetter('Mississippi', 'm'));
 }
 
 module.exports = countLetter;
