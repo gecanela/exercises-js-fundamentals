@@ -13,10 +13,22 @@
 
 function replaceCharacters(string, replacementDict) {
   // This is your job. :)
-}
+  let replaceString = ""
+  for (let i of string) {
+    if (i in replacementDict){
+      replaceString = replaceString + replacementDict[i];
+    } else {
+      replaceString = replaceString + i
+    }
+   
+  }
+  return replaceString
+} 
 
 if (require.main === module) {
   console.log('Running sanity checks for replaceCharacters:');
+  console.log(replaceCharacters('hello', { 'h' : 'y', 'l': '8'}))
+
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
