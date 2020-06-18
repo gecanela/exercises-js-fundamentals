@@ -8,11 +8,23 @@
  */
 
 function shortestWord(string) {
-  // This is your job. :)
+ 
+  
+  let words = string.split(' ');
+  let shortestSoFar = words[0];
+  
+  for (let word of words) {
+    if (word.length < shortestSoFar.length) {
+      shortestSoFar = word;
+    }
+  }
+
+  return shortestSoFar
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for shortestWord:');
+  console.log(shortestWord('You are a rockstar'));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
